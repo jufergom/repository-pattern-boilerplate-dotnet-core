@@ -1,4 +1,6 @@
 using DataAccess.EFCore;
+using DataAccess.EFCore.Repositories;
+using Domain.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,9 @@ builder.Services.AddSwaggerGen();
 //add DbContext services
 var dbPath = builder.Configuration.GetConnectionString("BloggingDatabase");
 builder.Services.AddSqlite<ApplicationContext>(dbPath);
+
+//add repository
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 var app = builder.Build();
 
