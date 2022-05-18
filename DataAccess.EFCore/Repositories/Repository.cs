@@ -27,6 +27,16 @@ namespace DataAccess.EFCore.Repositories
             _context.Set<T>().AddRange(entities);
         }
 
+        public void Update(T entity)
+        {
+            _context.Set<T>().Update(entity);
+        }
+
+        public void UpdateRange(IEnumerable<T> entities)
+        {
+            _context.Set<T>().UpdateRange(entities);
+        }
+
         public IQueryable<T> Find(Expression<Func<T, bool>> expression)
         {
             return _context.Set<T>().Where(expression);
@@ -37,9 +47,14 @@ namespace DataAccess.EFCore.Repositories
             return _context.Set<T>().AsQueryable();
         }
 
-        public T? GetById(int id)
+        public T GetById(int id)
         {
-            return _context.Set<T>().Find(id);
+            var entity = _context.Set<T>().Find(id);
+            if(entity == null)
+            {
+                throw new KeyNotFoundException();
+            }
+            return entity;
         }
 
         public void Remove(T entity)
