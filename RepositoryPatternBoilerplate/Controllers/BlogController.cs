@@ -8,23 +8,23 @@ namespace RepositoryPatternBoilerplate.Controllers
     [Route("[controller]")]
     public class BlogController : ControllerBase
     {
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<BlogController> _logger;
 
         private readonly IRepository<Blog> _blogRepository;
 
-        public BlogController(ILogger<WeatherForecastController> logger, IRepository<Blog> blogRepository)
+        public BlogController(ILogger<BlogController> logger, IRepository<Blog> blogRepository)
         {
             _logger = logger;
             _blogRepository = blogRepository;
         }
 
-        [HttpGet(Name = "GetBlog")]
+        [HttpGet(Name = "GetBlogs")]
         public IActionResult Get()
         {
             return Ok(_blogRepository.GetAll().ToList());
         }
 
-        [HttpGet("{id}", Name = "GetBlogs")]
+        [HttpGet("{id}", Name = "GetBlog")]
         public IActionResult Get(int id)
         {
             try
@@ -54,7 +54,7 @@ namespace RepositoryPatternBoilerplate.Controllers
             }
         }
 
-        [HttpPut(Name = "PutBlog")]
+        [HttpPut("{id}", Name = "PutBlog")]
         public IActionResult Put(int id, [FromBody] Blog item)
         {
             try
@@ -78,7 +78,7 @@ namespace RepositoryPatternBoilerplate.Controllers
             }
         }
 
-        [HttpPut(Name = "DeleteBlog")]
+        [HttpDelete("{id}", Name = "DeleteBlog")]
         public IActionResult Delete(int id)
         {
             try

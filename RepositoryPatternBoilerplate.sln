@@ -5,13 +5,11 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPatternBoilerplate", "RepositoryPatternBoilerplate\RepositoryPatternBoilerplate.csproj", "{FB829045-3660-4DA7-BCBA-C5B7688ED2CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.EFCore", "DataAccess.EFCore\DataAccess.EFCore.csproj", "{0D75EAA3-08B0-4337-9A97-1139372BD6BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess.EFCore", "DataAccess.EFCore\DataAccess.EFCore.csproj", "{0D75EAA3-08B0-4337-9A97-1139372BD6BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{04123213-A856-4C78-9C12-53DD4C6E860D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{04123213-A856-4C78-9C12-53DD4C6E860D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Core", "Boilerplate.Core\Boilerplate.Core.csproj", "{4C06F900-DE54-49E9-A38C-4548FDAD9D9B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Services", "Boilerplate.Services\Boilerplate.Services.csproj", "{75920FB3-310A-4363-BADB-107156E441F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boilerplate.Services", "Boilerplate.Services\Boilerplate.Services.csproj", "{75920FB3-310A-4363-BADB-107156E441F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +29,6 @@ Global
 		{04123213-A856-4C78-9C12-53DD4C6E860D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04123213-A856-4C78-9C12-53DD4C6E860D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04123213-A856-4C78-9C12-53DD4C6E860D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C06F900-DE54-49E9-A38C-4548FDAD9D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C06F900-DE54-49E9-A38C-4548FDAD9D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C06F900-DE54-49E9-A38C-4548FDAD9D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C06F900-DE54-49E9-A38C-4548FDAD9D9B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{75920FB3-310A-4363-BADB-107156E441F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{75920FB3-310A-4363-BADB-107156E441F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75920FB3-310A-4363-BADB-107156E441F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
