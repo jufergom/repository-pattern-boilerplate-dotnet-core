@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Boilerplate.Services\Boilerplate.Services.csproj" />
     <ProjectReference Include="..\DataAccess.EFCore\DataAccess.EFCore.csproj" />
   </ItemGroup>
 

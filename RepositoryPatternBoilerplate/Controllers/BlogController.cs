@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace RepositoryPatternBoilerplate.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class BlogController : ControllerBase
     {
         private readonly ILogger<BlogController> _logger;
@@ -18,12 +18,14 @@ namespace RepositoryPatternBoilerplate.Controllers
             _blogRepository = blogRepository;
         }
 
+        // GET: api/<BlogController>
         [HttpGet(Name = "GetBlogs")]
         public IActionResult Get()
         {
             return Ok(_blogRepository.GetAll().ToList());
         }
 
+        // GET: api/<BlogController>/5
         [HttpGet("{id}", Name = "GetBlog")]
         public IActionResult Get(int id)
         {
@@ -38,6 +40,7 @@ namespace RepositoryPatternBoilerplate.Controllers
             }
         }
 
+        // POST: api/<BlogController>
         [HttpPost(Name = "PostBlog")]
         public IActionResult Post([FromBody] Blog blog)
         {
@@ -54,6 +57,7 @@ namespace RepositoryPatternBoilerplate.Controllers
             }
         }
 
+        // PUT api/<BlogController>/5
         [HttpPut("{id}", Name = "PutBlog")]
         public IActionResult Put(int id, [FromBody] Blog item)
         {
@@ -78,6 +82,7 @@ namespace RepositoryPatternBoilerplate.Controllers
             }
         }
 
+        // DELETE api/<BlogController>/5
         [HttpDelete("{id}", Name = "DeleteBlog")]
         public IActionResult Delete(int id)
         {

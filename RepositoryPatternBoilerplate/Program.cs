@@ -1,3 +1,5 @@
+using Boilerplate.Services;
+using Boilerplate.Services.Interfaces;
 using DataAccess.EFCore;
 using DataAccess.EFCore.Repositories;
 using Domain.Interfaces;
@@ -17,6 +19,8 @@ builder.Services.AddSqlite<ApplicationContext>(dbPath);
 
 //add repository
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+//add entity services
+builder.Services.AddScoped<IPostService, PostService>();
 
 var app = builder.Build();
 
